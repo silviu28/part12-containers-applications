@@ -1,0 +1,34 @@
+Script started on 2026-02-02 19:52:14+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="128" LINES="32"]
+]0;silviu@mambo:~/repos/part12-containers-applications/script-answers]3008;start=df3f68ff-3c81-4454-9fd7-15205a425ba5;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=1e42b9ae-94d3-438b-ab01-2568bcb953ac;pid=48520;type=shell;cwd=/home/silviu/repos/part12-containers-applications/script-answers\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/script-answers\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/script-answers[0m$ ]133;B\sudo docker container u[Krun hello-world
+[?2004l]133;C\]666;vte.shell.preexec!\[sudo] password for silviu: 
+]3008;start=11725a1e232549ccb5826e88138c0dfe;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=1e42b9ae94d3438bab012568bcb953ac;pid=48705;pidfdid=48706;comm=sudo;targetuser=root;sessionid=c41;type=session\
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+]3008;end=11725a1e232549ccb5826e88138c0dfe\]0;silviu@mambo:~/repos/part12-containers-applications/script-answers]3008;end=3e27a792-0c0d-4fcf-9496-9a1c7dff21ef;exit=success\]3008;start=df3f68ff-3c81-4454-9fd7-15205a425ba5;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=1e42b9ae-94d3-438b-ab01-2568bcb953ac;pid=48520;type=shell;cwd=/home/silviu/repos/part12-containers-applications/script-answers\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/script-answers\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/script-answers[0m$ ]133;B\sudo docker container run -i [Kt ubuntu bash
+[?2004l]133;C\]666;vte.shell.preexec!\]3008;start=d3d502171bd34e4e82672560c1366177;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=1e42b9ae94d3438bab012568bcb953ac;pid=48912;pidfdid=48913;comm=sudo;targetuser=root;sessionid=c42;type=session\[?2004h]0;root@d1e953ae6b74: /root@d1e953ae6b74:/# cd  mkdir /usr/src/app
+[?2004l[?2004h]0;root@d1e953ae6b74: /root@d1e953ae6b74:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@d1e953ae6b74: /root@d1e953ae6b74:/# [Kexit
+[?2004lexit
+]3008;end=d3d502171bd34e4e82672560c1366177\]0;silviu@mambo:~/repos/part12-containers-applications/script-answers]3008;end=c79f50aa-f832-41fc-93b2-3e95954d0fb6;exit=success\]3008;start=df3f68ff-3c81-4454-9fd7-15205a425ba5;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=1e42b9ae-94d3-438b-ab01-2568bcb953ac;pid=48520;type=shell;cwd=/home/silviu/repos/part12-containers-applications/script-answers\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/script-answers\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/script-answers[0m$ ]133;B\exit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-02-02 19:53:01+02:00 [COMMAND_EXIT_CODE="0"]
