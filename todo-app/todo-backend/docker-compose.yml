@@ -1,0 +1,6 @@
+services:
+  app:                  # Name of the service
+    image: todo-server  # Prebuilt image name
+    build: .            # Where to build if no image (provided Dockerfile)
+    ports:              # Publish port
+      - 3000:3000
