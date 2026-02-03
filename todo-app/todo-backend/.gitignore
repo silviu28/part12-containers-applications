@@ -61,3 +61,5 @@ typings/
 .next
 
 /data/db
+redis_data
+mongo_data
