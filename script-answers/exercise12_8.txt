@@ -1,0 +1,75 @@
+Script started on 2026-02-03 17:26:03+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="181" LINES="32"]
+]0;silviu@mambo:~/repos/part12-containers-applications/todo-app/todo-backend]3008;start=61dbd010-96c9-43c2-8798-bc4aafb69532;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=c0fcb053-4232-4da9-a100-c87bdc1835ca;pid=34512;type=shell;cwd=/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/todo-app/todo-backend[0m$ ]133;B\exitdocker exec -it todo-backend-mongo-1 bash[22Pcontainer ls
+[?2004l]133;C\]666;vte.shell.preexec!\CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+7102cccc990d   initialized-mongo   "docker-entrypoint.s…"   15 minutes ago   Up 15 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+]0;silviu@mambo:~/repos/part12-containers-applications/todo-app/todo-backend]3008;end=f2857680-7a80-4e8a-b945-63857a213f8f;exit=success\]3008;start=61dbd010-96c9-43c2-8798-bc4aafb69532;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=c0fcb053-4232-4da9-a100-c87bdc1835ca;pid=34512;type=shell;cwd=/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/todo-app/todo-backend[0m$ ]133;B\docker container lsexit[Kdocker exec -it todo-backend-mongo-1 bash
+[?2004l]133;C\]666;vte.shell.preexec!\[?2004hroot@7102cccc990d:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	698213b082ee183bb78ce5af
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.6.0[0m
+Using MongoDB:		8.2.4
+[1m[33mUsing Mongosh[0m:		2.6.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2026-02-03T15:10:25.414+00:00: Soft rlimits for open file descriptors too low
+   2026-02-03T15:10:25.414+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-02-03T15:10:25.414+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-02-03T15:10:25.414+00:00: We suggest setting the contents of sysfsFile to 0.
+   2026-02-03T15:10:25.414+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the_data_[1G[0Jtest> use the_data[19Gbase
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'69820fe0b40a405e198ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'69820fe0b40a405e198ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insert({ et[1G[0Jthe_database> db.todos.insert({ e[34G[1G[0Jthe_database> db.todos.insert({ [33Gtext[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone: fals[33mfalse[39m ){[1G[0Jthe_database> db.todos.insert({ [33mtext[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m )[100G[1G[0Jthe_database> db.todos.insert({ [33mtext[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m [99G})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: [33mtrue[39m,
+  insertedIds: { [32m'0'[39m: ObjectId([32m'6982142482ee183bb78ce5b0'[39m) }
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'69820fe0b40a405e198ce5b0'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'69820fe0b40a405e198ce5b1'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'6982142482ee183bb78ce5b0'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G.exit
+[?2004l]0;[?2004hroot@7102cccc990d:/# exit
+[?2004lexit
+]0;silviu@mambo:~/repos/part12-containers-applications/todo-app/todo-backend]3008;end=d1679a45-43d8-4f5d-8452-3c742a3c5b6b;exit=success\]3008;start=61dbd010-96c9-43c2-8798-bc4aafb69532;user=silviu;hostname=mambo;machineid=da21a7e7986a45de87d4c9b12532661d;bootid=c0fcb053-4232-4da9-a100-c87bdc1835ca;pid=34512;type=shell;cwd=/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://mambo/home/silviu/repos/part12-containers-applications/todo-app/todo-backend\[?2004h]133;D;0\]133;A\[0m[1m[32msilviu@mambo[0m:[1m[32m~/repos/part12-containers-applications/todo-app/todo-backend[0m$ ]133;B\exit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-02-03 17:29:06+02:00 [COMMAND_EXIT_CODE="0"]
