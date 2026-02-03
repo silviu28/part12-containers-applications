@@ -1,3 +1,4 @@
+require("dotenv").config({ quiet: true })
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
