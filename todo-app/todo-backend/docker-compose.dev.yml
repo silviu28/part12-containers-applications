@@ -17,3 +17,20 @@ services:
     command: ['redis-server', '--appendonly', 'yes']
     # volumes:
     #   - ./redis_data:/data:z
+
+  server:
+    image: hello-back-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes: 
+      - ./:usr/src/app:z
+    ports:
+      - 3000:3000
+    environment:
+      - REDIS_URL=redis://localhost:6379
+      - MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database
+    container_name: hello-back-dev
+
+  debug-helper:
+    image: busybox
