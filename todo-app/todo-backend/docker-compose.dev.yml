@@ -7,16 +7,16 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: the_database
-    # volumes:
-    #   - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:z
-    #   - ./mongo_data:/data/db:z
+    volumes:
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:z
+      - ./mongo_data:/data/db:z
   redis:
     image: redis:8.0
     ports:
       - 6379:6379
     command: ['redis-server', '--appendonly', 'yes']
-    # volumes:
-    #   - ./redis_data:/data:z
+    volumes:
+      - ./redis_data:/data:z
 
   server:
     image: hello-back-dev
