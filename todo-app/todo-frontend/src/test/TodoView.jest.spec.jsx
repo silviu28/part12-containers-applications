@@ -1,7 +1,5 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { describe, it } from 'vitest';
-import '@testing-library/jest-dom'
 import Todo from "../Todos/Todo";
 
 describe('<TodoView />', () => {
