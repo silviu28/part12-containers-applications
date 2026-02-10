@@ -26,6 +26,10 @@ COPY --from=test-stage /usr/src/app .
 
 RUN npm run build
 
+FROM nginx:1.29.5
+
+COPY --from=build-stage /usr/src/dist /usr/share/nginx/html
+
 RUN npm install -g serve
 
 CMD ["serve", "dist"]
