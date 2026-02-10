@@ -1,3 +1,4 @@
+# this is the development compose - runs all containers in development mode (with HMR, realod on refresh, etc.)
 services:
   # server
   mongo:
